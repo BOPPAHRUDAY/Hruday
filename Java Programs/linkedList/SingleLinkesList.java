@@ -61,6 +61,7 @@ public class Main{
             }
             if(current.next.next==null)
             {
+                tail=current;
                 current.next=null;
             }else{
                 current.next=current.next.next;
