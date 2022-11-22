@@ -1,4 +1,3 @@
-#creation pf binary search tree and iterations
 #creation of node
 class node:
     def __init__(self,data):
@@ -16,6 +15,16 @@ class node:
                 self.left=node(data)
             else:
                 self.left.insertion(data)
+    def search(self,root,value):
+        if root is not None:
+            if root.data==value:
+                print(value,"element is found",end=" ")
+            elif root.data<value:
+                self.search(root.right,value)
+            elif root.data>value:
+                self.search(root.left,value)
+        else:
+            print("element is not there")
     def inorder(self,root):
         if root:
             self.inorder(root.left)
@@ -47,3 +56,7 @@ root.preorder(root)
 print()
 print("postorder: ")
 root.postorder(root)
+print()
+root.search(root,80)
+print()
+root.search(root,1000)
