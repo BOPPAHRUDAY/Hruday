@@ -6,7 +6,7 @@ class Solution:
                 return 
             
             if i<n:
-                give(ans,temp+"(",i+1,j)
+                give(ans,temp+"(",i+1,j)  #backtrack is take care of by recursion as we are not permantly updating temp
             
             if j<n and j<i:
                 give(ans,temp+")",i,j+1)
